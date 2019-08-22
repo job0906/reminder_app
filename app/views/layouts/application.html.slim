@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title
+      | ReminderApp
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""
+    javascript:
+      var OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "d57eab0b-0aa7-4332-a5ce-29159545b753",
+        });
+      });
+  body
+    .app-title.navbar.navbar-expand-md.navbar-light.bg-light
+      .navbar-brand Reminder_app
+    .container
+    = yield
