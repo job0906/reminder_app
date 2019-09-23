@@ -12,11 +12,12 @@ html
       var OneSignal = window.OneSignal || [];
       OneSignal.push(function() {
         OneSignal.init({
-          appId: "d57eab0b-0aa7-4332-a5ce-29159545b753",
+          appId: "58da89a0-46b9-4f23-8b24-c4123a7b5d87",
         });
       });
   body
     .app-title.navbar.navbar-expand-md.navbar-light.bg-light
       .navbar-brand Reminder_app
     .container
+    .onesignal-customlink-container
     = yield
