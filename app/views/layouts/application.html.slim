@@ -16,6 +16,7 @@ html
         });
         var address = #{raw params[:email].to_json};
         alert(address);
+        OneSignal.setEmail(address, {emailAuthHash: #{raw OpenSSL::HMAC.hexdigest(‘sha256’, apiKey, address).to_json}});
       });
   body
     .app-title.navbar.navbar-expand-md.navbar-light.bg-light
