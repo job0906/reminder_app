@@ -14,7 +14,7 @@ html
         OneSignal.init({
           appId: "58da89a0-46b9-4f23-8b24-c4123a7b5d87",
         });
-        var address = "#{raw params[:email].to_json}";
+        var address = #{raw params[:email].to_json};
         alert(address);
       });
   body
