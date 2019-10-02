@@ -8,10 +8,8 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""
-    javascript:
-      var OneSignal = window.OneSignal || [];
-      - address = params[:email]
-      });
+    - address = params[:email]
+    - apiKey = '58da89a0-46b9-4f23-8b24-c4123a7b5d87'
   body
     .app-title.navbar.navbar-expand-md.navbar-light.bg-light
       .navbar-brand Reminder_app
