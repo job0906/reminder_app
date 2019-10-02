@@ -14,7 +14,7 @@ html
         OneSignal.init({
           appId: "58da89a0-46b9-4f23-8b24-c4123a7b5d87",
         });
-        var address = “#{params[:email]}“;
+        var address = “= params[:email]“;
         alert(address);
         OneSignal.setEmail(address, {emailAuthHash: “= OpenSSL::HMAC.hexdigest(‘sha256’, apiKey, address)”});
       });
