@@ -9,10 +9,11 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""
     javascript:
+      /
       var OneSignal = window.OneSignal || [];
       OneSignal.push(function() {
         OneSignal.init({
-          appId: "58da89a0-46b9-4f23-8b24-c4123a7b5d87"
+          appId: "58da89a0-46b9-4f23-8b24-c4123a7b5d87" ,
         });
         var Address = “#{params[:email]}“;
         OneSignal.setEmail(address, {emailAuthHash: “#{OpenSSL::HMAC.hexdigest(‘sha256’, apiKey, address)}”});
