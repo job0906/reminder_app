@@ -14,9 +14,9 @@ html
         OneSignal.init({
           appId: "58da89a0-46b9-4f23-8b24-c4123a7b5d87",
         });
-        var address = “= params[:email]“;
+        var address = "#{raw params[:email].to_json}";
         alert(address);
-        OneSignal.setEmail(address, {emailAuthHash: “= OpenSSL::HMAC.hexdigest(‘sha256’, apiKey, address)”});
+        OneSignal.setEmail(address, {emailAuthHash: “#{raw OpenSSL::HMAC.hexdigest(‘sha256’, apiKey, address).to_json}”});
       });
   body
     .app-title.navbar.navbar-expand-md.navbar-light.bg-light
