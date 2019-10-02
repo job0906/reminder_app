@@ -14,9 +14,9 @@ html
       - apiKey = '58da89a0-46b9-4f23-8b24-c4123a7b5d87'
       OneSignal.push(function() {
         OneSignal.init({
-          appId: #{apiKey},
+          appId: #{raw apiKey.to_json},
         });
-        var address = #{address};
+        var address = #{raw address.to_json};
         alert(address);
       });
   body
