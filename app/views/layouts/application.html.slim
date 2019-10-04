@@ -17,7 +17,6 @@ html
           appId: #{raw apiKey.to_json},
         });
         var address = #{raw address.to_json};
-        alert(address);
         var hash = #{raw OpenSSL::HMAC.hexdigest('sha256', apiKey, address).to_json};
         OneSignal.setEmail(address, {emailAuthHash: hash});
       });
