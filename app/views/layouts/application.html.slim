@@ -21,9 +21,9 @@ html
         OneSignal.setEmail(address, {emailAuthHash: hash});
         OneSignal.on("subscriptionChange", function(isSubscribed) {
             /* If the user's subscription state changes during the page's session, update the button text */
-            updateMangeWebPushSubscriptionButton(buttonSelector);
+          //  updateMangeWebPushSubscriptionButton(buttonSelector);
+          alert(isSubscribed);
         });
-        alert(isSubscribed);
       });
   body
     .app-title.navbar.navbar-expand-md.navbar-light.bg-light
