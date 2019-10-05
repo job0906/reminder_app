@@ -18,11 +18,12 @@ html
         });
         var address = #{raw address.to_json};
         var hash = #{raw OpenSSL::HMAC.hexdigest('sha256', apiKey, address).to_json};
-        OneSignal.setEmail(address, {emailAuthHash: hash});
         OneSignal.on("subscriptionChange", function(isSubscribed) {
             /* If the user's subscription state changes during the page's session, update the button text */
           //  updateMangeWebPushSubscriptionButton(buttonSelector);
-          alert(isSubscribed);
+          if(isSubscribed){
+            OneSignal.setEmail(address, {emailAuthHash: hash});
+          };
         });
       });
   body
