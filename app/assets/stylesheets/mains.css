@@ -38,7 +38,7 @@ position: relative;
 }
 
 .hami{
-background-image: url(../images/text_01.png);
+background-image: image-url('text_01.png');
 background-repeat: no-repeat;
 background-position: center;
 width:100%;
@@ -51,7 +51,7 @@ position: relative;
 }
 
 .hami2{
-background-image: url(../images/text_02.png);
+background-image: image-url('text_02.png');
 background-repeat: no-repeat;
 background-position: center;
 width:100%;
@@ -64,7 +64,7 @@ position: relative;
 }
 
 .hami3{
-background-image: url(../images/text_03.png);
+background-image: image-url('text_03.png');
 background-repeat: no-repeat;
 background-position: center;
 width:100%;
@@ -77,7 +77,7 @@ position: relative;
 }
 
 .hami4{
-background-image: url(../images/text_04.png);
+background-image: image-url('text_04.png');
 background-repeat: no-repeat;
 background-position: center;
 width:100%;
